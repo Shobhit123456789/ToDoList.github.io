@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Heebo:wght@700&family=Oswald:wght@500&family=Roboto&display=swap');
+:root{
+    --blue:#2874f0;
+    --black:#192a56;
+    --light-color:#666;
+    --light:#e8e1e1;
+    /* --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1); */
+}
+*{
+   margin: 0;
+   padding: 0;
+   font-family: 'Poppins',sans-serif; 
+   box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 97vh;
+    background: linear-gradient(135deg,#79cdfa,#000000,#21fff4);
+    padding: 10px;
+}
+.todo{
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.Date-hour{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem 1.5rem 1rem;
+    font-size: 16px;
+    color: var(--light-color);
+}
+.todo h2{
+    color: black;/*#002765*/
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: center;
+    text-transform: uppercase;
+}
+.todo h2 i{
+    width: 30px;
+    margin-left: 10px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--light);
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 12px 30px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 15px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url("images/unchecked.png");
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url("images/checked.png");
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #433b3b;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background: #edeef0;
+}
+.footer .credit{
+    text-align: center;
+    /* border-top:.1rem solid rgba(0,0,0,.1); */
+    font-size: 1rem;
+    color: #000000;
+    padding: .5rem;
+    padding-top: 0.1rem;
+    margin-top: 0rem;
+    position: sticky;
+}
+.footer .credit span{
+    color: red;
+}
+
+
+
+/* media Queries */
+@media (max-width:991px) {
+    html{
+        font-size: 55%;
+    }
+    .container{
+        width: 50%;
+        padding: 10px;
+    }
+    ul li.checked::before{
+        background-image: url("images/checked.png");
+    }
+}
+@media (max-width:768px) {
+    html{
+        scroll-padding-top: 0;
+    }
+    /* body{
+        padding-bottom: 6rem;
+    } */
+    .container{
+        width: 100%;
+    }
+    .todo{
+        width: 100%;
+        max-width: 540px;
+        margin: 100px auto 20px;
+        padding: 40px 30px 70px;
+        border-radius: 10px;
+    }
+    .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: var(--light);
+        border-radius: 30px;
+        padding-left: 2px;
+        margin-bottom: 25px;
+    }
+    ul li.checked::before{
+        background-image: url("images/checked.png");
+    }
+}
+@media (max-width:450px) {
+    html{
+        font-size: 100%;
+    }
+    .container{
+        width: 100%;
+        padding: 10px;
+    }
+    .todo{
+        width: 100%;
+        max-width: 540px;
+        margin: 100px auto 20px;
+        padding: 40px 30px 70px;
+        border-radius: 10px;
+    }
+    .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: var(--light);
+        border-radius: 30px;
+        padding-left: 2px;
+        margin-bottom: 25px;
+    }
+    ul li.checked::before{
+        background-image: url("images/checked.png");
+    }
+}
+.row i{
+    font-size: 1rem;
+}
+@media (max-width:250px) {
+
+.container{
+    width: 100%;
+    padding: 10px;
+} 
+}
